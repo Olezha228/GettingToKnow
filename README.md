@@ -17,6 +17,6 @@ My repo where I save all stuff that I wanna keep in mind concerning some directi
 # Additionally...
 
 - Kubernets
-
+- read Osherov Roy - "The Art of Unit Testing"
 
 
