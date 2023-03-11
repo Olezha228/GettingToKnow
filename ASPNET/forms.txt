@@ -1,0 +1,14 @@
+<form method="post" action="postuser">
+    <p>Name: <input name="name" /></p>
+    <p>Age: <input name="age" type="number" /></p>
+    <input type="submit" value="Send" />
+</form>
+
+
+if (context.Request.Path == "/postuser")
+    {
+        var form = context.Request.Form;
+        string name = form["name"];
+        string age = form["age"];
+        await context.Response.WriteAsync($"<div><p>Name: {name}</p><p>Age: {age}</p></div>");
+    }
