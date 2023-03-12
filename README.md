@@ -15,7 +15,7 @@ My repo where I save all stuff that I wanna keep in mind concerning some directi
 | :---:   | :---: | :---: | :---: |
 | Git and GitHub | +   | -   | Bogdan St   |
 | Docker | +   | -   | Bogdan St   |
-| ASP.NET | proccess (3 ch.)   | -   | metanit.com   |
+| ASP.NET | proccess (4 ch.)   | -   | metanit.com   |
 | Go (+ web) | -   | -   | https://cloud.mail.ru/public/JNkH/  (addnext) HK2nBdP1h   |
 | JavaScript | -   | -   | https://yadi.sk/d/ (addnext) B0_0VcVKoj50Gw   |
 | MySQL | -   | -   | metanit.com   |
