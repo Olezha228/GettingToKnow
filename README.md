@@ -1,7 +1,7 @@
 # GettingToKnow
 My repo where I save all stuff that I wanna keep in mind concerning some directions in IT
 
-# Books to read...
+# Books to read
 
 - "DDD" by Fauler - in repo
 
