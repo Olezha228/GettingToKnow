@@ -5,18 +5,24 @@ My repo where I save all stuff that I wanna keep in mind concerning some directi
 
 - "DDD" by Fauler - in repo
 
+| Goal | Learnt    | Noted    | Source    |
+| :---:   | :---: | :---: | :---: |
+| "DDD" | proccess (33 p.)   | -   | GettingToKnow/books    |
+
 # MyGoals
 
-- Git and GitHub (done, unnoted) - course megaS
-- Docker (done, unnoted) - course megaS
-- ASP.NET (-, -) - reading metanit
-- Go - web-development (-, -) - course private cloud (ofide - pswrd: 1-9)
-- JavaScript (-, -) - course megaS
-- MySQL and just SQL practice (-, -)
+| Goal | Learnt    | Noted    | Source    |
+| :---:   | :---: | :---: | :---: |
+| Git and GitHub | +   | -   | Bogdan St   |
+| Docker | +   | -   | Bogdan St   |
+| ASP.NET | proccess (3 ch.)   | -   | metanit.com   |
+| Go (+ web) | -   | -   | https://cloud.mail.ru/public/JNkH/  (addnext) HK2nBdP1h   |
+| JavaScript | -   | -   | https://yadi.sk/d/ (addnext) B0_0VcVKoj50Gw   |
+| MySQL | -   | -   | metanit.com   |
 
 # Additionally...
 
-- Kubernets - course private cloud (ofide - pswrd: 1-9)
-- read Osherov Roy - "The Art of Unit Testing" - in repo
-
-
+| Goal | Learnt    | Noted    | Source    |
+| :---:   | :---: | :---: | :---: |
+| Kubernets | -   | -   | https://cloud.mail.ru/public/  (addnext) HKx5/DeMEAfGX7   |
+| "The Art of Unit Testing" | -   | -   | GettingToKnow/books   |
