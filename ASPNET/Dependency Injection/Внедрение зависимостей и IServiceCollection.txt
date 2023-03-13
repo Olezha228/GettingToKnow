@@ -1,0 +1,8 @@
+WebApplicationBuilder builder = WebApplication.CreateBuilder();
+IServiceCollection allServices = builder.Services;  // коллекция сервисов
+
+
+
+	
+var builder = WebApplication.CreateBuilder();
+builder.Services.AddMvc();

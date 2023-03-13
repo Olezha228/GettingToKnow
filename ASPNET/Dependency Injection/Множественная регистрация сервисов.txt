@@ -1,0 +1,39 @@
+Одна зависимость для нескольких типов:
+
+var builder = WebApplication.CreateBuilder();
+builder.Services.AddTransient<IHelloService, RuHelloService>();
+builder.Services.AddTransient<IHelloService, EnHelloService>();
+
+используем так:
+class HelloMiddleware
+{
+    readonly IEnumerable<IHelloService> helloServices;
+ 
+    public HelloMiddleware(RequestDelegate _, IEnumerable<IHelloService> helloServices)
+    {
+        this.helloServices = helloServices;
+    }
+ 
+    public async Task InvokeAsync(HttpContext context)
+    {
+        context.Response.ContentType = "text/html; charset=utf-8";
+        string responseText = "";
+        foreach (var service in helloServices)
+        {
+            responseText += $"<h3>{service.Message}</h3>";
+        }
+        await context.Response.WriteAsync(responseText);
+    }
+}
+
+
+
+Один объект для несокльких зависимостей:
+
+var builder = WebApplication.CreateBuilder();
+ 
+builder.Services.AddSingleton<ValueStorage>();
+builder.Services.AddSingleton<IGenerator>(serv => serv.GetRequiredService<ValueStorage>());
+builder.Services.AddSingleton<IReader>(serv => serv.GetRequiredService<ValueStorage>());
+
+и дальше через конструктор...

@@ -1,0 +1,19 @@
+В ASP.NET Core мы можем получить добавленные в приложения сервисы различными способами;
+
+Через свойство Services объекта WebApplication (service locator)
+
+Через свойство RequestServices контекста запроса HttpContext в компонентах middleware (service locator)
+
+Через конструктор класса
+
+Через параметр метода Invoke компонента middleware
+
+Через свойство Services объекта WebApplicationBuilder
+
+
+но лучше всего:
+Через конструктор класса
+
+Через параметр метода Invoke компонента middleware
+
+DI - сам подхватывает сервисы в места интерфейсов

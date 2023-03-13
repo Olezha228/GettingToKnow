@@ -1,0 +1,94 @@
+var builder = WebApplication.CreateBuilder();
+ 
+// до билда
+builder.Services.AddTransient<ITimeService, ShortTimeService>();
+ 
+var app = builder.Build();
+ 
+app.Run(async context =>
+{
+    var timeService = app.Services.GetService<ITimeService>(); 
+    await context.Response.WriteAsync($"Time: {timeService?.GetTime()}");
+});
+ 
+app.Run();
+ 
+interface ITimeService
+{
+    string GetTime();
+}
+// время в формате hh::mm
+class ShortTimeService : ITimeService
+{
+    public string GetTime() => DateTime.Now.ToShortTimeString();
+}
+// время в формате hh::mm::ss
+class LongTimeService : ITimeService
+{
+    public string GetTime() => DateTime.Now.ToLongTimeString();
+}
+
+
+можно с расширениями
+
+public static class ServiceProviderExtensions
+{
+    public static void AddTimeService(this IServiceCollection services)
+    {
+        services.AddTransient<TimeService>();
+    }
+}
+И теперь используем этот метод:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+var builder = WebApplication.CreateBuilder();
+ 
+builder.Services.AddTimeService();
+ 
+var app = builder.Build();
+app.Run(async context =>
+{
+    var timeService = app.Services.GetService<TimeService>();
+    context.Response.ContentType = "text/html; charset=utf-8";
+    await context.Response.WriteAsync($"Текущее время: {timeService?.GetTime()}");
+});
+ 
+app.Run();
+ 
+public class TimeService
+{
+    public string GetTime() => DateTime.Now.ToShortTimeString();
+}
+ 
+public static class ServiceProviderExtensions
+{
+    public static void AddTimeService(this IServiceCollection services)
+    {
+        services.AddTransient<TimeService>();
+    }
+}
